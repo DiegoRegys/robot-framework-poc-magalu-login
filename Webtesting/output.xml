@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-07T01:41:10.141049" rpa="false" schemaversion="5">
+<suite id="s1" name="Magalu Login Testes Sequencial" source="C:\Users\Diego\Desktop\magalu-robot\robot-framework-poc-magalu-login\Webtesting\magalu_login_testes_sequencial.robot">
+<test id="s1-t1" name="CT001 - Login Valido" line="11">
+<kw name="Abrir o navegador" owner="magalu_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:10.326108" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-07T01:41:10.325942" elapsed="1.593816"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-07T01:41:11.919937" elapsed="0.030256"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:10.325424" elapsed="1.624907"/>
+</kw>
+<kw name="Acessar home page do site Magalu" owner="magalu_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:11.951346" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-07T01:41:11.951157" elapsed="3.193189"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER-SEARCH-INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:15.144498" elapsed="0.273570"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:11.950724" elapsed="3.467526"/>
+</kw>
+<kw name="Entrar na tela de login" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTNLOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:15.418945" elapsed="0.023936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:15.443269" level="INFO">Clicking element 'xpath=//*[@class='block font-3xsm-bold group-hover:underline']'.</msg>
+<arg>${BTNLOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T01:41:15.443052" elapsed="2.846040"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:15.418671" elapsed="2.870553"/>
+</kw>
+<kw name="Verificar se esta na tela de login" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TELALOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.289834" elapsed="0.013427"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.289576" elapsed="0.013776"/>
+</kw>
+<kw name="Verificar se o campo de email esta visivel" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO-EMAIL-LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.303794" elapsed="0.011729"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.303592" elapsed="0.012058"/>
+</kw>
+<kw name="Verificar se o campo de senha esta visivel" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO-SENHA-LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.316171" elapsed="0.010998"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.315952" elapsed="0.011311"/>
+</kw>
+<kw name="Verificar se o botao de continuar esta visivel" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN-CONTINUAR-LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.327700" elapsed="0.011174"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.327503" elapsed="0.011466"/>
+</kw>
+<kw name="Preencher o campo de email com &quot;email_valido&quot;" owner="magalu_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:18.339592" level="INFO">Typing text 'diego.regys@gmail.com' into text field 'xpath=//*[@placeholder='Digite seu e-mail, CPF ou CNPJ']'.</msg>
+<arg>${CAMPO-EMAIL-LOGIN}</arg>
+<arg>${EMAIL-VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.339421" elapsed="0.095330"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.339217" elapsed="0.095630"/>
+</kw>
+<kw name="Preencher o campo de senha com &quot;senha_valida&quot;" owner="magalu_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:18.435473" level="INFO">Typing text 'Chrono95' into text field 'xpath=//*[@id='input-password']'.</msg>
+<arg>${CAMPO-SENHA-LOGIN}</arg>
+<arg>${SENHA-VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.435305" elapsed="0.051198"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.435093" elapsed="0.051508"/>
+</kw>
+<kw name="Clicar no botao de continuar" owner="magalu_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-07T01:41:18.487382" level="INFO">Clicking element 'xpath=//*[@data-testid="login-with-password"]'.</msg>
+<arg>${BTN-CONTINUAR-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.487216" elapsed="0.079445"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.486995" elapsed="0.079761"/>
+</kw>
+<kw name="Verificar se o login foi realizado com sucesso" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TELA-IDENTIFICACAO-CODIGO}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T01:41:18.567267" elapsed="8.562169"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:18.567031" elapsed="8.562500"/>
+</kw>
+<kw name="Fechar o navegador" owner="magalu_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-07T01:41:27.130139" elapsed="2.305178"/>
+</kw>
+<status status="PASS" start="2026-01-07T01:41:27.129911" elapsed="2.305671"/>
+</kw>
+<doc>Teste de login com credenciais validas no site Magalu.
+Verifica se o usuario consegue logar com sucesso utilizando um email e senha validos.</doc>
+<tag>login</tag>
+<tag>valido</tag>
+<status status="PASS" start="2026-01-07T01:41:10.324659" elapsed="19.111082"/>
+</test>
+<doc>Suite de testes automatizados para a funcionalidade de login do site Magalu.
+Esta suite abrange diversos cenarios de teste para validar o processo de login,
+incluindo casos de sucesso e falha, bem como verificacoes de elementos da interface do usuario.</doc>
+<status status="PASS" start="2026-01-07T01:41:10.142342" elapsed="19.294096"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">valido</stat>
+</tag>
+<suite>
+<stat name="Magalu Login Testes Sequencial" id="s1" pass="1" fail="0" skip="0">Magalu Login Testes Sequencial</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
