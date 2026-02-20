@@ -13,11 +13,18 @@ ${URL}                        https://www.magazineluiza.com.br/
 ${HEADER-SEARCH-INPUT}        xpath=//*[@data-testid='header-search-input']
 ${BTNLOGIN}                   xpath=//*[contains(text(),"Entre ou Cadastre-se")]
 ${TELALOGIN}                  xpath=//*[@class='LoginPage-title']
+${TELA-ESQUECI-SENHA}         xpath=//*[contains(text(),"Recuperação de senha")]
 ${CAMPO-EMAIL-LOGIN}          xpath=//*[@placeholder='Digite seu e-mail, CPF ou CNPJ']
 ${CAMPO-SENHA-LOGIN}          xpath=//*[@id='input-password']
+${CAMPO-ESQUECI-MINHA-SENHA}  xpath=//*[contains(text(),"Esqueci minha senha")]
 ${BTN-CONTINUAR-LOGIN}        xpath=//*[@data-testid="login-with-password"]
+${LABEL-DADOS-INVALIDOS}      xpath=//*[contains(text(),"Dados inválidos")]  
+${LABEL-EMAIL-INVALIDO}       xpath=//*[contains(text(),"Insira um CPF, CNPJ ou E-mail válido.")]  
+
+${EMAIL-INVALIDO}             diego.regys@gmailcom
 ${EMAIL-VALIDO}               diego.regys@gmail.com
 ${SENHA-VALIDA}               Chrono95
+${SENHA-INVALIDA}             123456789
 ${TELA-IDENTIFICACAO-CODIGO}  xpath=//*[@data-testid='ResetPasswordIdentification']
 
 
@@ -53,6 +60,12 @@ Verificar se o botao de continuar esta visivel
 Preencher o campo de email com "email_valido"
     Input Text    ${CAMPO-EMAIL-LOGIN}   ${EMAIL-VALIDO}
 
+Preencher o campo de email com "email_invalido"
+    Input Text    ${CAMPO-EMAIL-LOGIN}   ${EMAIL-INVALIDO}    
+
+Preencher o campo de senha com "senha_invalida"
+    Input Text    ${CAMPO-SENHA-LOGIN}   ${SENHA-INVALIDA}
+
 Preencher o campo de senha com "senha_valida"
     Input Text    ${CAMPO-SENHA-LOGIN}    ${SENHA-VALIDA}
 
@@ -61,3 +74,18 @@ Clicar no botao de continuar
 
 Verificar se o login foi realizado com sucesso
     Wait Until Element Is Visible    ${TELA-IDENTIFICACAO-CODIGO}  timeout=10
+
+Verificar se a mensagem de erro por daos incorretos
+    Wait Until Element Is Visible    ${LABEL-DADOS-INVALIDOS}  timeout=10
+
+Verificar se a mensagem de erro email invalido
+    Wait Until Element Is Visible    ${LABEL-EMAIL-INVALIDO}  timeout=10
+
+Verificar se o link 'Esqueci minha senha' esta visivel
+    Wait Until Element Is Visible    ${CAMPO-ESQUECI-MINHA-SENHA}     timeout=10
+
+Clicar no link 'Esqueci minha senha'
+    Click Element                    ${CAMPO-ESQUECI-MINHA-SENHA}
+
+Verificar se a tela de recuperacao de senha e exibida
+    Wait Until Element Is Visible    ${TELA-ESQUECI-SENHA}

@@ -23,45 +23,45 @@ CT001 - Login Valido
     Clicar no botao de continuar
     Verificar se o login foi realizado com sucesso
 
-# CT002 - Login Senha Invalida
-#     [Documentation]    Teste de login com senha invalida no site Magalu.
-#     ...                Verifica se o sistema exibe a mensagem de erro correta ao tentar logar
-#     ...                com uma senha incorreta.
-#     [Tags]             login  invalido
-#     Acessar home page do site Magalu
-#     Entrar na tela de login
-#     Verificar se esta na tela de login
-#     Verificar se o campo de email esta visivel
-#     Verificar se o campo de senha esta visivel
-#     Verificar se o botao de continuar esta visivel
-#     Preencher o campo de email com "email_valido"
-#     Preencher o campo de senha com "senha_invalida"
-#     Clicar no botao de continuar
-#     Verificar se a mensagem de erro por senha invalida e exibida
+CT002 - Login Senha Invalida
+     [Documentation]    Teste de login com senha invalida no site Magalu.
+     ...                Verifica se o sistema exibe a mensagem de erro correta ao tentar logar
+     ...                com uma senha incorreta.
+     [Tags]             login  invalido
+     Acessar home page do site Magalu
+     Entrar na tela de login
+     Verificar se esta na tela de login
+     Verificar se o campo de email esta visivel
+     Verificar se o campo de senha esta visivel
+     Verificar se o botao de continuar esta visivel
+     Preencher o campo de email com "email_valido"
+     Preencher o campo de senha com "senha_invalida"
+     Clicar no botao de continuar
+     Verificar se a mensagem de erro por daos incorretos
 
-# CT003 - Login Email Invalido
-#     [Documentation]    Teste de login com email invalido no site Magalu.
-#     ...                Verifica se o sistema exibe a mensagem de erro correta ao tentar logar
-#     ...                com um email incorreto.
-#     [Tags]             login  invalido
-#     Acessar home page do site Magalu
-#     Entrar na tela de login
-#     Verificar se esta na tela de login
-#     Verificar se o campo de email esta visivel
-#     Verificar se o campo de senha esta visivel
-#     Verificar se o botao de continuar esta visivel
-#     Preencher o campo de email com "email_invalido"
-#     Preencher o campo de senha com "senha_valida"
-#     Clicar no botao de continuar
-#     Verificar se a mensagem de erro por email invalido e exibida
+CT003 - Login Email Invalido
+     [Documentation]    Teste de login com email invalido no site Magalu.
+     ...                Verifica se o sistema exibe a mensagem de erro correta ao tentar logar
+     ...                com um email incorreto.
+     [Tags]             login  invalido
+     Acessar home page do site Magalu
+     Entrar na tela de login
+     Verificar se esta na tela de login
+     Verificar se o campo de email esta visivel
+     Verificar se o campo de senha esta visivel
+     Verificar se o botao de continuar esta visivel
+     Preencher o campo de email com "email_invalido"
+     Preencher o campo de senha com "senha_valida"
+     Clicar no botao de continuar
+     Verificar se a mensagem de erro email invalido
 
-# CT004 - Validar Tela Esqueci Minha Senha
-#     Acessar home page do site Magalu
-#     Entrar na tela de login
-#     Verificar se esta na tela de login
-#     Verificar se o link 'Esqueci minha senha' esta visivel
-#     Clicar no link 'Esqueci minha senha'
-#     Verificar se a tela de recuperacao de senha e exibida
+CT004 - Validar Tela Esqueci Minha Senha
+     Acessar home page do site Magalu
+     Entrar na tela de login
+     Verificar se esta na tela de login
+     Verificar se o link 'Esqueci minha senha' esta visivel
+     Clicar no link 'Esqueci minha senha'
+     Verificar se a tela de recuperacao de senha e exibida
 
 # CT005 - Entrar sem Senha com email Valido
 #     Acessar home page do site Magalu
@@ -143,3 +143,4 @@ CT001 - Login Valido
 #     Verificar se a tela de login do Google e exibida
 #     Realizar o login com credenciais validas do Google
 #     Verificar se o login no Magalu foi realizado com sucesso apos o login no Google
+

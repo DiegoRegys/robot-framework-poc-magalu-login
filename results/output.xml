@@ -1,156 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-19T23:05:00.985761" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-19T23:32:32.012854" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot-Framework-Poc-Magalu-Login" source="C:\Users\Diego\Desktop\magalu-robot\robot-framework-poc-magalu-login">
 <suite id="s1-s1" name="Webtesting" source="C:\Users\Diego\Desktop\magalu-robot\robot-framework-poc-magalu-login\Webtesting">
 <suite id="s1-s1-s1" name="Magalu Login Testes Sequencial" source="C:\Users\Diego\Desktop\magalu-robot\robot-framework-poc-magalu-login\Webtesting\magalu_login_testes_sequencial.robot">
-<test id="s1-s1-s1-t1" name="CT001 - Login Valido" line="11">
+<test id="s1-s1-s1-t1" name="CT004 - Validar Tela Esqueci Minha Senha" line="58">
 <kw name="Abrir o navegador" owner="magalu_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:01.202216" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-02-19T23:32:32.223522" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-19T23:05:01.201900" elapsed="1.779974"/>
+<status status="PASS" start="2026-02-19T23:32:32.223203" elapsed="1.716634"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-19T23:05:02.982133" elapsed="0.025552"/>
+<status status="PASS" start="2026-02-19T23:32:33.940058" elapsed="0.023466"/>
 </kw>
-<status status="PASS" start="2026-02-19T23:05:01.201185" elapsed="1.806684"/>
+<status status="PASS" start="2026-02-19T23:32:32.222493" elapsed="1.741219"/>
 </kw>
 <kw name="Acessar home page do site Magalu" owner="magalu_resources">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:03.009001" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<msg time="2026-02-19T23:32:33.964970" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-02-19T23:05:03.008685" elapsed="0.732146"/>
+<status status="PASS" start="2026-02-19T23:32:33.964647" elapsed="0.687772"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER-SEARCH-INPUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:03.741113" elapsed="0.074465"/>
+<status status="PASS" start="2026-02-19T23:32:34.652626" elapsed="0.073241"/>
 </kw>
-<status status="PASS" start="2026-02-19T23:05:03.008182" elapsed="0.807565"/>
+<status status="PASS" start="2026-02-19T23:32:33.964093" elapsed="0.762130"/>
 </kw>
 <kw name="Entrar na tela de login" owner="magalu_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BTNLOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:03.816608" elapsed="0.011149"/>
+<status status="PASS" start="2026-02-19T23:32:34.727932" elapsed="0.012171"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:03.828424" level="INFO">Clicking element 'xpath=//*[contains(text(),"Entre ou Cadastre-se")]'.</msg>
+<msg time="2026-02-19T23:32:34.740739" level="INFO">Clicking element 'xpath=//*[contains(text(),"Entre ou Cadastre-se")]'.</msg>
 <arg>${BTNLOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T23:05:03.827955" elapsed="3.235914"/>
+<status status="PASS" start="2026-02-19T23:32:34.740300" elapsed="3.872883"/>
 </kw>
-<status status="PASS" start="2026-02-19T23:05:03.816094" elapsed="3.247936"/>
+<status status="PASS" start="2026-02-19T23:32:34.726740" elapsed="3.886614"/>
 </kw>
 <kw name="Verificar se esta na tela de login" owner="magalu_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TELALOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.380672" elapsed="0.013581"/>
+<status status="PASS" start="2026-02-19T23:32:38.928586" elapsed="0.020140"/>
 </kw>
-<status status="PASS" start="2026-02-19T23:05:07.064302" elapsed="0.330130"/>
+<status status="PASS" start="2026-02-19T23:32:38.613706" elapsed="0.335175"/>
 </kw>
-<kw name="Verificar se o campo de email esta visivel" owner="magalu_resources">
+<kw name="Verificar se o link 'Esqueci minha senha' esta visivel" owner="magalu_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO-EMAIL-LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.395296" elapsed="0.009602"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.394764" elapsed="0.010267"/>
-</kw>
-<kw name="Verificar se o campo de senha esta visivel" owner="magalu_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO-SENHA-LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.405657" elapsed="0.012630"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.405262" elapsed="0.013183"/>
-</kw>
-<kw name="Verificar se o botao de continuar esta visivel" owner="magalu_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BTN-CONTINUAR-LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.419152" elapsed="0.012255"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.418704" elapsed="0.012862"/>
-</kw>
-<kw name="Preencher o campo de email com &quot;email_valido&quot;" owner="magalu_resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:07.432630" level="INFO">Typing text 'diego.regys@gmail.com' into text field 'xpath=//*[@placeholder='Digite seu e-mail, CPF ou CNPJ']'.</msg>
-<arg>${CAMPO-EMAIL-LOGIN}</arg>
-<arg>${EMAIL-VALIDO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.432280" elapsed="0.108253"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.431821" elapsed="0.108886"/>
-</kw>
-<kw name="Preencher o campo de senha com &quot;senha_valida&quot;" owner="magalu_resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:07.541812" level="INFO">Typing text 'Chrono95' into text field 'xpath=//*[@id='input-password']'.</msg>
-<arg>${CAMPO-SENHA-LOGIN}</arg>
-<arg>${SENHA-VALIDA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.541457" elapsed="0.066559"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.540986" elapsed="0.067199"/>
-</kw>
-<kw name="Clicar no botao de continuar" owner="magalu_resources">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:07.609418" level="INFO">Clicking element 'xpath=//*[@data-testid="login-with-password"]'.</msg>
-<arg>${BTN-CONTINUAR-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T23:05:07.609085" elapsed="0.100140"/>
-</kw>
-<status status="PASS" start="2026-02-19T23:05:07.608594" elapsed="0.100798"/>
-</kw>
-<kw name="Verificar se o login foi realizado com sucesso" owner="magalu_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-02-19T23:05:18.507312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-02-19T23:05:18.507701" level="FAIL">Element 'xpath=//*[@data-testid='ResetPasswordIdentification']' not visible after 10 seconds.</msg>
-<arg>${TELA-IDENTIFICACAO-CODIGO}</arg>
+<arg>${CAMPO-ESQUECI-MINHA-SENHA}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-02-19T23:05:08.007922" elapsed="10.505428">Element 'xpath=//*[@data-testid='ResetPasswordIdentification']' not visible after 10 seconds.</status>
+<status status="PASS" start="2026-02-19T23:32:38.949602" elapsed="0.010200"/>
 </kw>
-<status status="FAIL" start="2026-02-19T23:05:07.709678" elapsed="10.803883">Element 'xpath=//*[@data-testid='ResetPasswordIdentification']' not visible after 10 seconds.</status>
+<status status="PASS" start="2026-02-19T23:32:38.949154" elapsed="0.010801"/>
+</kw>
+<kw name="Clicar no link 'Esqueci minha senha'" owner="magalu_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-19T23:32:38.961021" level="INFO">Clicking element 'xpath=//*[contains(text(),"Esqueci minha senha")]'.</msg>
+<arg>${CAMPO-ESQUECI-MINHA-SENHA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-19T23:32:38.960700" elapsed="1.512902"/>
+</kw>
+<status status="PASS" start="2026-02-19T23:32:38.960241" elapsed="1.513722"/>
+</kw>
+<kw name="Verificar se a tela de recuperacao de senha e exibida" owner="magalu_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TELA-ESQUECI-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-19T23:32:40.475540" elapsed="0.017428"/>
+</kw>
+<status status="PASS" start="2026-02-19T23:32:40.474640" elapsed="0.018483"/>
 </kw>
 <kw name="Fechar o navegador" owner="magalu_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-19T23:05:18.514664" elapsed="2.436662"/>
+<status status="PASS" start="2026-02-19T23:32:40.493969" elapsed="2.297763"/>
 </kw>
-<status status="PASS" start="2026-02-19T23:05:18.514152" elapsed="2.437464"/>
+<status status="PASS" start="2026-02-19T23:32:40.493458" elapsed="2.298455"/>
 </kw>
-<doc>Teste de login com credenciais validas no site Magalu.
-Verifica se o usuario consegue logar com sucesso utilizando um email e senha validos.</doc>
-<tag>login</tag>
-<tag>valido</tag>
-<status status="FAIL" start="2026-02-19T23:05:01.198880" elapsed="19.753177">Element 'xpath=//*[@data-testid='ResetPasswordIdentification']' not visible after 10 seconds.</status>
+<status status="PASS" start="2026-02-19T23:32:32.220183" elapsed="10.571933"/>
 </test>
 <doc>Suite de testes automatizados para a funcionalidade de login do site Magalu.
 Esta suite abrange diversos cenarios de teste para validar o processo de login,
 incluindo casos de sucesso e falha, bem como verificacoes de elementos da interface do usuario.</doc>
-<status status="FAIL" start="2026-02-19T23:05:01.033918" elapsed="19.927261"/>
+<status status="PASS" start="2026-02-19T23:32:32.051177" elapsed="10.744934"/>
 </suite>
-<status status="FAIL" start="2026-02-19T23:05:01.029630" elapsed="19.934124"/>
+<status status="PASS" start="2026-02-19T23:32:32.047782" elapsed="10.751036"/>
 </suite>
-<status status="FAIL" start="2026-02-19T23:05:00.989669" elapsed="19.981796"/>
+<status status="PASS" start="2026-02-19T23:32:32.016889" elapsed="10.784206"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">login</stat>
-<stat pass="0" fail="1" skip="0">valido</stat>
 </tag>
 <suite>
-<stat name="Robot-Framework-Poc-Magalu-Login" id="s1" pass="0" fail="1" skip="0">Robot-Framework-Poc-Magalu-Login</stat>
-<stat name="Webtesting" id="s1-s1" pass="0" fail="1" skip="0">Robot-Framework-Poc-Magalu-Login.Webtesting</stat>
-<stat name="Magalu Login Testes Sequencial" id="s1-s1-s1" pass="0" fail="1" skip="0">Robot-Framework-Poc-Magalu-Login.Webtesting.Magalu Login Testes Sequencial</stat>
+<stat name="Robot-Framework-Poc-Magalu-Login" id="s1" pass="1" fail="0" skip="0">Robot-Framework-Poc-Magalu-Login</stat>
+<stat name="Webtesting" id="s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Poc-Magalu-Login.Webtesting</stat>
+<stat name="Magalu Login Testes Sequencial" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Poc-Magalu-Login.Webtesting.Magalu Login Testes Sequencial</stat>
 </suite>
 </statistics>
 <errors>
