@@ -1,10 +1,17 @@
+from selenium import webdriver
+chrome_options = Options()
+chrome_options.add_argument("--dislable-notifications")
+service = Service("./chromedriver.exe")
+
+driver = webdriver.Chrome(service=service, options=chrome_options)
+
 *** Settings ***
 Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}                        https://www.magazineluiza.com.br/
 ${HEADER-SEARCH-INPUT}        xpath=//*[@data-testid='header-search-input']
-${BTNLOGIN}                   xpath=//*[@class='block font-3xsm-bold group-hover:underline']
+${BTNLOGIN}                   xpath=//*[contains(text(),"Entre ou Cadastre-se")]
 ${TELALOGIN}                  xpath=//*[@class='LoginPage-title']
 ${CAMPO-EMAIL-LOGIN}          xpath=//*[@placeholder='Digite seu e-mail, CPF ou CNPJ']
 ${CAMPO-SENHA-LOGIN}          xpath=//*[@id='input-password']
