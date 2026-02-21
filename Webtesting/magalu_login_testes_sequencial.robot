@@ -63,27 +63,27 @@ CT004 - Validar Tela Esqueci Minha Senha
      Clicar no link 'Esqueci minha senha'
      Verificar se a tela de recuperacao de senha e exibida
 
-# CT005 - Entrar sem Senha com email Valido
-#     Acessar home page do site Magalu
-#     Entrar na tela de login
-#     Verificar se esta na tela de login
-#     Verificar se o campo de email esta visivel
-#     Verificar se o botao de Entrar sem Senha visivel
-#     Preencher o campo de email com "email_valido"
-#     Deixar o campo de senha vazio
-#     Clicar no botao de Entrar sem Senha
-#     Verificar se é direcionado para a tela de verificacao por codigo
+CT005 - Entrar sem Senha com email Valido
+     Acessar home page do site Magalu
+     Entrar na tela de login
+     Verificar se esta na tela de login
+     Verificar se o campo de email esta visivel
+     Verificar se o botao de Entrar sem Senha visivel
+     Preencher o campo de email com "email_valido"
+     Deixar o campo de senha vazio
+     Clicar no botao de Entrar sem Senha
+     Verificar se é direcionado para a tela de verificacao por codigo
 
-# CT006 - Entrar sem Senha com email não cadastrado
-#     Acessar home page do site Magalu
-#     Entrar na tela de login
-#     Verificar se esta na tela de login
-#     Verificar se o campo de email esta visivel
-#     Verificar se o botao de Entrar sem Senha visivel
-#     Preencher o campo de email com "email_nao_cadastrado"
-#     Deixar o campo de senha vazio
-#     Clicar no botao de Entrar sem Senha
-#     Verificar se a mensagem de erro por email nao cadastrado e exibida
+CT006 - Entrar sem Senha com email não cadastrado
+     Acessar home page do site Magalu
+     Entrar na tela de login
+     Verificar se esta na tela de login
+     Verificar se o campo de email esta visivel
+     Verificar se o botao de Entrar sem Senha visivel
+     Preencher o campo de email com "email_nao_cadastrado"
+     Deixar o campo de senha vazio
+     Clicar no botao de Entrar sem Senha
+     Verificar se a mensagem de erro por email nao cadastrado e exibida
 
 # CT007 - Entrar Sem Senha com email vazio
 #     Acessar home page do site Magalu

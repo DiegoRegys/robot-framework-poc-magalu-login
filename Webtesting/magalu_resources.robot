@@ -14,18 +14,22 @@ ${HEADER-SEARCH-INPUT}        xpath=//*[@data-testid='header-search-input']
 ${BTNLOGIN}                   xpath=//*[contains(text(),"Entre ou Cadastre-se")]
 ${TELALOGIN}                  xpath=//*[@class='LoginPage-title']
 ${TELA-ESQUECI-SENHA}         xpath=//*[contains(text(),"Recuperação de senha")]
+
 ${CAMPO-EMAIL-LOGIN}          xpath=//*[@placeholder='Digite seu e-mail, CPF ou CNPJ']
 ${CAMPO-SENHA-LOGIN}          xpath=//*[@id='input-password']
 ${CAMPO-ESQUECI-MINHA-SENHA}  xpath=//*[contains(text(),"Esqueci minha senha")]
 ${BTN-CONTINUAR-LOGIN}        xpath=//*[@data-testid="login-with-password"]
+${BTN-ENTRAR-SEM-SENHA}       xpath=//*[contains(text(),"Entrar sem senha")]
 ${LABEL-DADOS-INVALIDOS}      xpath=//*[contains(text(),"Dados inválidos")]  
-${LABEL-EMAIL-INVALIDO}       xpath=//*[contains(text(),"Insira um CPF, CNPJ ou E-mail válido.")]  
+${LABEL-EMAIL-INVALIDO}       xpath=//*[contains(text(),"Insira um CPF, CNPJ ou E-mail válido.")]
+${LABEL-EMAIL-NAO-CADASTRADO}       xpath=//*[contains(text(),"E-mail ou CPF não cadastrado")]
 
+${EMAIL_NAO_CADASTRADO}       diego.regys@gmail.com.br
 ${EMAIL-INVALIDO}             diego.regys@gmailcom
 ${EMAIL-VALIDO}               diego.regys@gmail.com
 ${SENHA-VALIDA}               Chrono95
 ${SENHA-INVALIDA}             123456789
-${TELA-IDENTIFICACAO-CODIGO}  xpath=//*[@data-testid='ResetPasswordIdentification']
+${TELA-IDENTIFICACAO-CODIGO}  xpath=//*[contains(text(),"Código de acesso à conta")]
 
 
 *** KeyWords ***
@@ -89,3 +93,21 @@ Clicar no link 'Esqueci minha senha'
 
 Verificar se a tela de recuperacao de senha e exibida
     Wait Until Element Is Visible    ${TELA-ESQUECI-SENHA}
+
+Verificar se o botao de Entrar sem Senha visivel
+    Wait Until Element Is Visible    ${BTN-ENTRAR-SEM-SENHA}  timeout=10
+
+Deixar o campo de senha vazio
+    Clear Element Text    ${CAMPO-SENHA-LOGIN}
+
+Clicar no botao de Entrar sem Senha
+    Click Element    ${BTN-ENTRAR-SEM-SENHA}
+
+Verificar se é direcionado para a tela de verificacao por codigo
+    Wait Until Element Is Visible    ${TELA-IDENTIFICACAO-CODIGO}  timeout=10
+
+Preencher o campo de email com "email_nao_cadastrado"
+    Input Text    ${CAMPO-EMAIL-LOGIN}   ${EMAIL_NAO_CADASTRADO}
+
+Verificar se a mensagem de erro por email nao cadastrado e exibida
+    Wait Until Element Is Visible    ${LABEL-EMAIL-NAO-CADASTRADO}  timeout=10
